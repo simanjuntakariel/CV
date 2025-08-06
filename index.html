@@ -12,8 +12,10 @@
     <i class="fas fa-moon"></i>
   </button>
 
-  <nav>
-    <ul>
+  <nav class="navbar">
+    <div class="logo">Ariel Valorie Simanjuntak</div>
+    <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#tentang">About</a></li>
       <li><a href="#pendidikan">Pendidikan</a></li>
       <li><a href="#pengalaman">Pengalaman</a></li>
@@ -24,8 +26,8 @@
   </nav>
 
   <header>
-    <img src="assets/riell.jpg" alt="Foto Ariel" class="profile" />
-    <h1>Ariel Valorie Simanjuntak</h1>
+    <img src="assets/riell.jpg" alt="Foto Ariel" class="profile wiggle" />
+    <h1 class="nama">Ariel Valorie Simanjuntak</h1>
     <p>Student | Personal Web | Public Relation</p>
     <a href="assets/CV_Ariel.pdf" download class="btn-primary">Download CV</a>
   </header>
@@ -33,7 +35,14 @@
   <main>
     <section id="tentang">
       <h2>About Me</h2>
-      <p>I am currently studying at Pamulang University, majoring in Information Engineering with a bachelor's degree from 2022 until now, my work experience is as a Machine Operator from 2024 until now, as a Shop Admin at Tokopedia, Shopee, Bukalapak in the Order Receiving and Stocking Department from 2022-2023, I graduated from vocational school majoring in Automotive. Cool, Friendly, Affectionate, Responsible that's who I am</p>
+      <p>I am currently studying at Pamulang University, majoring in Information Engineering with a bachelor's degree from 2022 until now. My work experience includes:
+        <ul>
+          <li>Machine Operator at PT Perintis Dinamika Sekatama (Feb 2024 – Sekarang)</li>
+          <li>Kontraktor di PT HUB (Jul 2023 – Des 2024)</li>
+          <li>Admin Online Shop (Tokopedia, Shopee, Bukalapak) – Penerima Order & Stok Barang (Sep 2022 – Apr 2023)</li>
+        </ul>
+        I graduated from a vocational school majoring in Automotive. Cool, Friendly, Affectionate, Responsible – that's who I am.
+      </p>
     </section>
 
     <section id="pendidikan">
@@ -49,18 +58,9 @@
     <section id="pengalaman">
       <h2>Pengalaman Kerja</h2>
       <ul>
-        <li><strong>Admin Online Shop</strong> – Tokopedia, Shopee, Bukalapak  
-          <br><em>Sept 2022 - April 2023</em>  
-          <br>Bagian penerimaan order dan stok barang.
-        </li>
-        <li><strong>Contractor</strong> – PT HUB  
-          <br><em>Juli 2023 - Des 2024</em>  
-          <br>Bekerja sebagai Contractor Project bagian Mechanical Electrical.
-        </li>
-        <li><strong>Machine Operator</strong> – PT Perintis Dinamika Sekatama  
-          <br><em>Feb 2024 - Sekarang</em>  
-          <br>Bertanggung jawab dalam pengoperasian mesin produksi bagian Laser Cutting Wood and Metal.
-        </li>
+        <li>Machine Operator - PT Perintis Dinamika Sekatama (Feb 2024 – Sekarang)</li>
+        <li>Contraktor - PT HUB (Jul 2023 – Des 2024)</li>
+        <li>Admin Online Shop - Tokopedia, Shopee, Bukalapak (Sep 2022 – Apr 2023)</li>
       </ul>
     </section>
 
@@ -69,18 +69,18 @@
       <ul>
         <li><strong>Fitness Center App (Java GUI)</strong> - Aplikasi desktop untuk manajemen member dan transaksi gym</li>
         <li><strong>Website Portfolio</strong> - Dibuat menggunakan HTML, CSS, dan GitHub Pages</li>
-        <li><strong>Sistem Manajemen Keuangan Sekolah</strong> - Web app dengan PHP & MySQL, Membuat Class Diagram, Sequence Diagram, Use Case Diagram</li>
+        <li><strong>Sistem Manajemen Keuangan Sekolah</strong> - Web app dengan PHP & MySQL</li>
       </ul>
     </section>
 
     <section id="keterampilan">
       <h2>Keterampilan</h2>
       <ul class="skills">
-        <li>Laser Cutting</li>
-        <li>Running Saw</li>
-        <li>Excel</li>
-        <li>Word</li>
-        <li>HTML, CSS</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Java (GUI)</li>
+        <li>PHP & MySQL</li>
         <li>Git & GitHub</li>
       </ul>
     </section>
@@ -102,6 +102,10 @@
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle('dark');
+    }
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
     }
   </script>
 </body>
